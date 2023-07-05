@@ -1,5 +1,5 @@
-package re21.ieun.config;//package com.district11.stackoverflow.config;
-//
+//package re21.ieun.config;//package com.district11.stackoverflow.config;
+
 //import org.springframework.beans.factory.annotation.Value;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
