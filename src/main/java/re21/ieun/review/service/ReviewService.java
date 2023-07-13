@@ -30,17 +30,36 @@ public class ReviewService {
         this.memberService = memberService;
     }
 
+
+
     public Review createReview(Review review) {
+        if (review.getMember() == null) {
+            throw new IllegalArgumentException("리뷰의 회원 정보가 필요합니다.");
+        }
 
         verifyReview(review);
 
         return reviewRepository.save(review);
     }
 
+    public Review findVeryfiReview(Long reviewId) {
+        if (reviewId == null) {
+            throw new IllegalArgumentException("리뷰 ID가 필요합니다.");
+        }
+        Optional<Review> optionalReview = reviewRepository.findById(reviewId);
+        Review findReview = optionalReview.orElseThrow(() ->
+                new BusinessLogicException(ExceptionCode.REVIEW_NOT_FOUND));
+
+        return findReview;
+    }
+
+
+
+
     // 리뷰 수정
-    /*
+
     public Review updateReview(Review review) {
-        Review findReview = findVerifyReview(review.getReviewId());
+        Review findReview = findVeryfiReview(review.getReviewId());
 
         Optional.ofNullable(review.getTitle())
                 .ifPresent(title -> findReview.setTitle(title));
@@ -51,10 +70,10 @@ public class ReviewService {
         return reviewRepository.save(findReview);
     }
 
-     */
+
 
     // 리뷰 삭제
-    /*
+
     public Review deleteReview(long reviewId) {
 
         Review findReview = findVeryfiReview(reviewId);
@@ -63,7 +82,6 @@ public class ReviewService {
 
         return reviewRepository.save(findReview);
     }
-     */
 
     // member가 존재하는지 확인
     public void verifyReview(Review review) {
@@ -72,15 +90,7 @@ public class ReviewService {
         review.setMember(member);
     }
 
-    // Review를 수정하기 위해서 Review가 있는지 검증
-    public Review findVeryfiReview(long reviewId) {
 
-        Optional<Review> optionalReview = reviewRepository.findById(reviewId);
-        Review findReview = optionalReview.orElseThrow(() ->
-                new BusinessLogicException(ExceptionCode.REVIEW_NOT_FOUND));
-
-        return findReview;
-    }
 
     // 모든 Reivew 확인
     public List<ReviewResponseDto> findReviews() {

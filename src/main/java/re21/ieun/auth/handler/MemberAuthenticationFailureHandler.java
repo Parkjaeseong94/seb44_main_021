@@ -21,6 +21,7 @@ public class MemberAuthenticationFailureHandler implements AuthenticationFailure
         // 인증 실패 시, 에러 로그를 기록하거나 error response를 전송할 수 있다.
         log.error("# Authentication failed: {}", exception.getMessage());
 
+
         BusinessLogicException businessLogicException = new BusinessLogicException(ExceptionCode.MEMBER_NOT_FOUND);
         response.setStatus(HttpServletResponse.SC_BAD_REQUEST); // 상태 코드 설정
         response.getWriter().write(businessLogicException.getMessage()); // 응답 내용 작성
