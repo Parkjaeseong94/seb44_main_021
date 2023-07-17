@@ -9,7 +9,6 @@ import re21.ieun.member.entity.Member;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @Getter
@@ -31,9 +30,6 @@ public class Upcycling extends Auditable {
     @Column(nullable = false)
     private int totalQuantity;
 
-
-    // contentImg 만들어지면 생성
-    //private String contentImg;
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
@@ -54,6 +50,7 @@ public class Upcycling extends Auditable {
     @Column(columnDefinition = "bigint default 0", nullable = false)
     private Long viewCount;
 
+    // Image(이미지)
     @Column
     private String thumbNailImage;
 
