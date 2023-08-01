@@ -48,16 +48,7 @@ public class EmailSender {
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
         msg.setSubject("[이은] - 회원가입 인증코드입니다.");
 
-        /*
-        String content =
-                "안녕하세요! 당신의 건강에 도움을 드릴 Wrieating 입니다! \n"
-                        + "가입해주셔서 감사합니다.\n"
-                        + "Wrieating 회원가입 인증 코드입니다 : "
-                        + verificationCode;
-        msg.setText(content);
 
-         */
-        // HTML content of the email with UTF-8 character encoding
         String content = "<html>"
                 + "<head><meta charset='UTF-8'></head>"
                 + "<body style='font-family: Arial, sans-serif;'>"
