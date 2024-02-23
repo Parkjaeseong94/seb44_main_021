@@ -1,9 +1,9 @@
-package re21.ieun;
+// package re21.ieun;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class IeunApplicationTests {
+// @SpringBootTest
+// class IeunApplicationTests {
 
-}
+// }
