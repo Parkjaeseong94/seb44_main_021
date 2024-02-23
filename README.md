@@ -42,18 +42,19 @@
 
 <br>
 
-<details>
-<summary>담당 파트</summary>
-<div markdown="1">
 
 <br>
 
-**신성철**
- - Main
- - Funding detail - modal(1,2)
- - Store detail - modal(1)
- - Funding list
- - Store list
+**박재성**
+ - Member CRUD
+ - 이미지 업로드 구현 (AWS S3 연동)
+ - JWT
+ - 카테고리
+ - 클라이언트, 서버 배포 및 관리
+ - 인증번호 이메일
+ - GitHub Actions
+ - 정렬, 필터 기능
+ - CLIENT HTTPS 적용, EC2 Loadbalance 적용
 
  <br>
  
@@ -81,16 +82,12 @@
 
 <br>
  
-**박재성**
- - Member CRUD
- - 이미지 업로드 구현 (AWS S3 연동)
- - JWT
- - 카테고리
- - 클라이언트, 서버 배포 및 관리
- - 인증번호 이메일
- - GitHub Actions
- - 정렬, 필터 기능
- - CLIENT HTTPS 적용, EC2 Loadbalance 적용
+**신성철**
+ - Main
+ - Funding detail - modal(1,2)
+ - Store detail - modal(1)
+ - Funding list
+ - Store list
  
 <br>
  
@@ -101,10 +98,7 @@
  - 검색기능
  - Redis 로그아웃
  - 인증번호 이메일 
- 
 
-</div>
-</details>
 
 <br>
 <br/>
